@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mthaldi Webpage</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+        <div class="parent">
+            <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon">
+		</span>
+        </button>
+		<a class="navbar-brand" href="">MThaldi</a>
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+		    <ul class="navbar-nav mr-auto mt-2 mt-lg-1">
+			    <li class="nav-item">
+				<a class="nav-link" href="">Home </a>
+			    </li>
+			    <li class="nav-item">
+				<a class="nav-link" href="">Genres</a>
+			    </li>
+			    <li class="nav-item"><a class="nav-link" href="">Top-10</a>
+			    </li>
+			    <li class="nav-item"><a class="nav-link" href="">Space</a>
+				</li>
+                <li class="nav-item"><a class="nav-link " href="About.html">About</a>
+		    	</li>
+	    	</ul>
+		    <form class="form-inline my-2 my-lg-0">
+			    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+				    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search
+				    </button>
+		    </form>
+	     </div>
+        </nav>
+
+            <br>
+	    	<br>
+            <div class="container">
+		    <div class="row">
+			<div class="col-md-6">
+				<div class="left_col"> <br>
+					<h2>Welcome !!</h2><br>
+						<p>This is the homepage of the next big website of yours. Fully customizble and editable. Created by none other by Mayank Thaldi.
+						</p>
+				</div>
+			</div>
+
+                <div class="col-md-6">
+		    <div class="right_col">
+					<img id="img_id" src="http://pre02.deviantart.net/652f/th/pre/f/2015/189/d/3/invoker_by_animefanno1-d90hx27.png"
+                         height="350" width="300"></img>
+				<br><br>
+						<h2>My blog posts</h2>
+
+            <br>
+                	<div class="list-group" id="playlist">
+				       {% block content %}
+                       {% endblock %}
+                    </div>
+
+		    </div>
+
+            <br><br><br><br>
+            <br><br><br><br>
+	</div>
+
+            	<div class="row">
+		<div class="col-md-6">
+				<div class="left_col">
+					<h2>Music</h2><br>
+						<p>Music is an art form and cultural activity whose medium is sound organized in time.
+						The common elements of music are pitch (which governs melody and harmony), rhythm (and
+						its associated concepts tempo, meter, and articulation), dynamics (loudness and softness),
+						and the sonic qualities of timbre and texture (which are sometimes termed the "color" of a
+						musical sound). Different styles or types of music may emphasize, de-emphasize or omit some
+						of these elements. Music is performed with a vast range of instruments and vocal techniques
+						ranging from singing to rapping; there are solely instrumental pieces, solely vocal pieces
+						(such as songs without instrumental accompaniment) and pieces that combine singing and instruments.
+						See glossary of musical terminology.
+						</p>
+				</div>
+		</div>
+    <div class="col-md-6">
+		<div class="main_col">
+					<h2>Blogs</h2>
+	    	{% for post in posts %}
+        <div>
+        <h3><a href="">{{ post.title }}</a></h3>
+        <p id="check">published: {{ post.published_date }}</p>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
+
+
+			<br><br>
+		<br><br>
+		<br><br>
+</div>
+
+    </div>
+
+	</div>
+        </div>
+
+    <div class="footer_font">
+	    <footer class="page-footer font-small stylish-color-dark pt-4 mt-4">
+		    <!--Footer Links-->
+		    <div class="container text-center text-md-left" id="footer">
+			    <div class="row">
+				    <!--First column-->
+				    <div class="col-md-5">
+					    <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Footer Content</h5>
+					    	<p>The type of Music one listens gives the true insight of his/her personality.
+						    Its an insight like none other. May you enjoy as well as take care of yourself
+						    and people around you</p>
+			    	</div>
+			    	<!--/.First column-->
+				    <hr class="clearfix w-100 d-md-none">
+
+			    	<!--Second column-->
+
+				    <div class="col-md-3 mx-auto">
+					    <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Usefull Links</h5>
+					    <ul class="list-unstyled" style="color-white;">
+						    <li>
+							<a href="#!">Resume</a>
+						    </li>
+						    <li>
+							<a href="#!">Website_2</a>
+					    	</li>
+					    	<li><a href="#!">Website_3</a>
+					    	</li>
+						    <li><a href="#!">Website_4</a>
+					    	</li>
+                        </ul>
+                    </div>
+				    <div class="col-md-4  mx-auto">
+					    <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Contact</h5>
+					    <p><i class="fa fa-home "></i>Sector-33 Noida-201301,India</p>
+					    <p><i class="fa fa-envelope "></i> thaldi.mayank@example.com</p>
+					    <p><i class="fa fa-phone "></i> + 91-9871846469</p>
+					    <p><i class="fa fa-print "></i></p>
+			    	</div>
+
+				    <!--/.Fourth column-->
+		    	</div>
+		    </div>
+
+		<!--/.Footer Links-->
+
+		<hr><!--Call to action-->
+            <div class="text-center py-3">
+			    <ul class="list-unstyled list-inline mb-0">
+				    <li class="list-inline-item">
+				    <h5 class="mb-1">Register for free</h5></li>
+				    <li class="list-inline-item"><a href="#!" class="btn btn-danger btn-rounded">Sign up!</a></li>
+		    	</ul>
+            </div><!--/.Call to action--><hr><!--Social buttons-->
+
+			<div class="text-center">
+				<ul class="list-unstyled list-inline">
+				<li class="list-inline-item" class="button_img" >
+				<a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+				<img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /></a></li>
+				<li class="list-inline-item">
+				<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank">
+				<img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" /></a>
+				</li>
+				<li class="list-inline-item">
+				<a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+				<img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" /></a></li>
+				<li class="list-inline-item" >
+				<a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com">
+				<img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" /></a></li>
+				</ul></div><!--/.Social buttons--><!--Copyright-->
+
+				<div class="footer-copyright py-3 text-center">
+				<div class="container-fluid">© 2017 Copyright: <a href="#">MTusic </a>
+				</div>
+			</div>
+			<!--/.Copyright-->
+	</footer>
+         </div>
+        </div>
+</body>
+</html>

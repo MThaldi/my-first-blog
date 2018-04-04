@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-{% load staticfiles %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Mthaldi Webpage</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
-</head>
-<body>
-<div id="parent">
-    <h1> Welcome To Mthaldi.com </h1>
-    {% for post in posts %}
-    <div>
-        <h3><a href="">{{ post.title }}</a></h3>
-        <p id="check">published: {{ post.published_date }}</p>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </div>
-    {% endfor %}
+{% extends 'blog/base.html' %}
+{% block content %}
+<div class="list-group" id="playlist">
+{% for post in posts %}
+	<a href="" class="list-group-item list-group-item-action">{{ post.title }}</a>
+{% endfor %}
 </div>
-</body>
-</html>
+{% endblock %}
