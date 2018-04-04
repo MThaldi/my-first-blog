@@ -2,7 +2,7 @@
 {% block content %}
 <div class="list-group" id="playlist">
 {% for post in posts %}
-	<a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+	<a href="{% url 'post_details' pk=post.pk %}">{{ post.title }}</a>
 {% endfor %}
 </div>
 {% endblock %}
