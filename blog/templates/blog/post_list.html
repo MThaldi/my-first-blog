@@ -1,18 +1,23 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ola's blog</title>
+    <title>Mthaldi Webpage</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
 </head>
 <body>
-    <H1>Welcom To Mthaldi.com </H1>
+<div id="parent">
+    <h1> Welcome To Mthaldi.com </h1>
     {% for post in posts %}
     <div>
-        <p>published: {{ post.published_date }}</p>
-        <h1><a href="">{{ post.title }}</a></h1>
+        <h3><a href="">{{ post.title }}</a></h3>
+        <p id="check">published: {{ post.published_date }}</p>
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
     {% endfor %}
-
+</div>
 </body>
 </html>
