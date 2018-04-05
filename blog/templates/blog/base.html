@@ -1,125 +1,134 @@
 <!DOCTYPE html>
-{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mthaldi Webpage</title>
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>AMDistributers</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
-        <div class="parent">
-            <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
-	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-
-            <span class="navbar-toggler-icon">
-		</span>
+	<!--Thereis no fcuking block content or anything. this is just to get the fashion site online-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">AMDistributers</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-		<a class="navbar-brand" href="">MThaldi</a>
-		<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-		    <ul class="navbar-nav mr-auto mt-2 mt-lg-1">
-			    <li class="nav-item">
-				<a class="nav-link" href="">Home </a>
-			    </li>
-			    <li class="nav-item">
-				<a class="nav-link" href="">Genres</a>
-			    </li>
-			    <li class="nav-item"><a class="nav-link" href="">Top-10</a>
-			    </li>
-			    <li class="nav-item"><a class="nav-link" href="">Space</a>
-				</li>
-                <li class="nav-item"><a class="nav-link " href="About.html">About</a>
-		    	</li>
-	    	</ul>
-		    <form class="form-inline my-2 my-lg-0">
-			    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-				    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search
-				    </button>
-		    </form>
-	     </div>
-        </nav>
-
-            <br>
-	    	<br>
-            <div class="container">
-		    <div class="row">
-			<div class="col-md-6">
-				<div class="left_col"> <br>
-					<h2>Welcome !!</h2><br>
-						<p>This is the homepage of the next big website of yours. Fully customizble and editable.
-                            Created by Mayank Thaldi.
-						</p>
-				</div>
-			</div>
-
-                <div class="col-md-6">
-		    <div class="right_col">
-					<img id="img_id" src="http://pre02.deviantart.net/652f/th/pre/f/2015/189/d/3/invoker_by_animefanno1-d90hx27.png"
-                         height="350" width="300"></img>
-				<br><br>
-						<h2>My blog posts</h2>
-
-            <br>
-                	<div class="list-group" id="playlist">
-				       {% block content %}
-                       {% endblock %}
-                    </div>
-
-		    </div>
-
-            <br><br><br><br>
-            <br><br><br><br>
-	</div>
-
-            	<div class="row">
-		<div class="col-md-6">
-				<div class="left_col">
-					<h2>Music</h2><br>
-						<p>Music is an art form and cultural activity whose medium is sound organized in time.
-						The common elements of music are pitch (which governs melody and harmony), rhythm (and
-						its associated concepts tempo, meter, and articulation), dynamics (loudness and softness),
-						and the sonic qualities of timbre and texture (which are sometimes termed the "color" of a
-						musical sound). Different styles or types of music may emphasize, de-emphasize or omit some
-						of these elements. Music is performed with a vast range of instruments and vocal techniques
-						ranging from singing to rapping; there are solely instrumental pieces, solely vocal pieces
-						(such as songs without instrumental accompaniment) and pieces that combine singing and instruments.
-						See glossary of musical terminology.
-						</p>
-				</div>
-		</div>
-    <div class="col-md-6">
-		<div class="main_col">
-					<h2>Blogs</h2>
-	    	{% for post in posts %}
-        <div>
-        <h3><a href="">{{ post.title }}</a></h3>
-        <p id="check">published: {{ post.published_date }}</p>
-        <p>{{ post.text|linebreaksbr }}</p>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact-us</a>
+                </li>
+            <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+             </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Categories
+                </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Jewelery</a>
+                <a class="dropdown-item" href="#">Pantones</a>
+                <a class="dropdown-item" href="#">Mens Wear</a>
+                <a class="dropdown-item" href="#">Womens Wear</a>
+                <a class="dropdown-item" href="#">Kids Wear</a>
+                <a class="dropdown-item" href="#">March Wear</a>
+             </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    <div>
+        <img src=".\static\images\img_1.jpg" class="img-fluid" alt="Responsive image">
     </div>
-    {% endfor %}
+    <div class="container">
+        <h3>Pantones</h3>
+        <br>
+        <div class="row">
+            <div class="col-lg-3 col-sm-6  ">
+                <img src="https://cdn.fashionmagazine.com/wp-content/uploads/2014/04/Fashion-Magazine-May-2014-Lorde.jpg" alt="" class="img-thumbnail">
 
+                n: But you are never able to do what you promise.
+            </div>
+            <div class="col-lg-3 col-sm-6 ">
 
-			<br><br>
-		<br><br>
-		<br><br>
-</div>
+                <img src="https://1.soompi.io/wp-content/uploads/2015/11/twice-ceci-1.jpg" alt="" class="img-thumbnail">
+                Never Leave Me! <br> This is not how I envisioned it! <br> I am sorry i have to end this.
+            </div>
+            <div class="col-lg-3 col-sm-6  ">
+                <img src="https://i.pinimg.com/originals/ac/59/98/ac5998ade221e9f50e4e2c0fba2dee96.jpg" alt="" class="img-thumbnail">
+                This was supposed to be our time. You promised.
+            </div>
+            <div class="col-lg-3 col-sm-6  ">
 
-    </div>
+                <img src="https://cdn.fashionmagazine.com/wp-content/uploads/2016/01/fashion-magazine-february-2016-cover-natlie-dormer-01-800x1092.jpg" alt="" class="img-thumbnail">
+                I am not doing this willingly. But you have gone too far. Too out of reach of any1. I will have to do it.
+            </div>
+            <div class="col-lg-3 col-sm-6 ">
 
-	</div>
+                <img src="https://kpopmallusa-xmbdjpqcq6gkxvac6m1c.netdna-ssl.com/img/2016/12/official-bts-bangtan-boys-singles-january-1-2017-korean-magazine_00.jpg" alt="" class="img-thumbnail">
+                Noooo!!!! <br> I cant do this!<br> I love you. I love you a lot!! <br>
+                More than anything.
+            </div>
+
+            <div class="col-lg-3 col-sm-6 ">
+
+                <img src="https://art8amby.files.wordpress.com/2011/09/fashion-magazine-fall-2011-zuzanna-bijoch-by-zuza-krajewska-bartek-wieczorek.jpg" alt="" class="img-thumbnail">
+                <br> But to save you I will have to kill you. Else there will be nothing left in this world. For any1.
+            </div>
+
+            <div class="col-lg-3 col-sm-6 ">
+
+                <img src="https://www.fashiongonerogue.com/wp-content/uploads/2014/09/blake-lively-fashion-magazine-2014-cover.jpg" alt="" class="img-thumbnail">
+                S : But you are my world. <br> It has always been. <br> <br> It has always been. <br><br> It has always been. <br> I never told you but. I always remembered your smile.
+                Your face. YOur memories were with me always. You are the only one that matters. <br> No1 else matters. <br>NobodY!!!!!!<br> but u.<br><br>AAAGHAHGAHGHAH!
+            </div>
+
+            <div class="col-lg-3 col-sm-6 ">
+
+                <img src="https://i.pinimg.com/736x/d1/0e/b0/d10eb085f4ba8b4c220b8a990f013330.jpg" alt="" class="img-thumbnail">
+                *tear drops from S*
+                <br>
+                *SCream from N. N starts sobbing*
+                <br>
+                N:Thats why I was chosen to do this ! I am sorry!.
+            </div>
+            <div class="col-lg-3 col-sm-6  ">
+                <img src="https://cdn.fashionmagazine.com/wp-content/uploads/2014/04/Fashion-Magazine-May-2014-Lorde.jpg" alt="" class="img-thumbnail">
+
+                But you are never able to do what you promise.
+            </div>
+            <div class="col-lg-3 col-sm-6 ">
+
+                <img src="https://1.soompi.io/wp-content/uploads/2015/11/twice-ceci-1.jpg" alt="" class="img-thumbnail">
+                Never Leave Me! <br> This is not how I envisioned it! <br> I am sorry i have to kill you.
+            </div>
+             <div class="col-lg-3 col-sm-6  ">
+                <img src="https://cdn.fashionmagazine.com/wp-content/uploads/2014/04/Fashion-Magazine-May-2014-Lorde.jpg" alt="" class="img-thumbnail">
+
+                But you are never able to do what you promise.
+            </div>
+            <div class="col-lg-3 col-sm-6 ">
+
+                <img src="https://1.soompi.io/wp-content/uploads/2015/11/twice-ceci-1.jpg" alt="" class="img-thumbnail">
+                Never Leave Me! <br> This is not how I envisioned it! <br> I am sorry i have to kill you.
+            </div>
+
         </div>
 
-    <div class="footer_font">
-	    <footer class="page-footer font-small stylish-color-dark pt-4 mt-4">
-		    <!--Footer Links-->
-		    <div class="container text-center text-md-left" id="footer">
-			    <div class="row">
+        <div class="footer_font">
+	        <footer class="page-footer font-small stylish-color-dark pt-4 mt-4">
+		     <!--Footer Links-->
+		         <div class="container text-center text-md-left" id="footer">
+			        <div class="row">
 				    <!--First column-->
-				    <div class="col-md-5">
+                        <div class="col-md-5">
+
 					    <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Footer Content</h5>
 					    	<p>The type of Music one listens gives the true insight of his/her personality.
 						    Its an insight like none other. May you enjoy as well as take care of yourself
@@ -164,7 +173,8 @@
 			    <ul class="list-unstyled list-inline mb-0">
 				    <li class="list-inline-item">
 				    <h5 class="mb-1">Register for free</h5></li>
-				    <li class="list-inline-item"><a href="#!" class="btn btn-danger btn-rounded">Sign up!</a></li>
+				    <li class="list-inline-item">
+                        <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a></li>
 		    	</ul>
             </div><!--/.Call to action--><hr><!--Social buttons-->
 
@@ -191,7 +201,6 @@
 			</div>
 			<!--/.Copyright-->
 	</footer>
-         </div>
-        </div>
+    </div>
 </body>
 </html>
